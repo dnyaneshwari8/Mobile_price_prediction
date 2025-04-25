@@ -52,7 +52,7 @@ features = np.array([[weight, ram, front_cam, back_cam, battery, screen,
 scaled_features = scaler.transform(features)
 
 # Prediction
-if st.button("##Predict Price "):
+if st.button("Predict Price "):
     log_price = model.predict(scaled_features)
     price = np.expm1(log_price)  # reverse log1p
     corrected_price = price[0] * 0.94  # Optional correction factor
