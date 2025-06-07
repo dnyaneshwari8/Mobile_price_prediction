@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import joblib
+st.markdown("[View Code](https://github.com/dnyaneshwari8/mobile-price-prediction)")
 
 model = joblib.load('xgb_mobile_price_model.pkl')
 scaler = joblib.load('xgb_scaler.pkl')
