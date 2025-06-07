@@ -1,13 +1,13 @@
 import streamlit as st
 import numpy as np
 import joblib
-st.markdown("[View Code](https://github.com/dnyaneshwari8/mobile-price-prediction)")
 
 model = joblib.load('xgb_mobile_price_model.pkl')
 scaler = joblib.load('xgb_scaler.pkl')
 
 st.set_page_config(page_title=" Mobile Price Predictor", layout="centered")
 st.title(" Mobile Price Prediction App")
+st.markdown("[View Code](https://github.com/dnyaneshwari8/mobile-price-prediction)")
 st.markdown("Predict smartphone launch price based on specifications")
 
 weight = st.number_input(" Weight (grams)", min_value=80.0, max_value=600.0, step=1.0)
